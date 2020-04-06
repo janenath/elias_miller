@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+$white: #e2e3e4;
+$black: #2e2e2f;
+$gold: #c0b283;
+
+$family-sans-serif: "Montserrat", sans-serif;
+$link: $gold;
+
+$body-background-color: $black;
+$body-color: $white;
+$navbar-item-color: $white;
+$navbar-dropdown-background-color: $gold;
+
+
+
+
+
+@import "~bulma/bulma.sass";
