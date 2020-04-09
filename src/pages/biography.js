@@ -11,20 +11,22 @@ const Biography = () => (
       query={graphql`
         query {
           contentfulBiography {
-            biography {
-              biography 
-              
+            biographyText {
+              childMarkdownRemark {
+                html
+              }
             }
-            
           }
         }
       `}
       render={data => (
         <Layout>
-        <SEO title="Elias Miller Biography" />
-        <h1>Elias Miller Biography</h1>
-        <p>{data.contentfulBiography.biography.biography}</p>
-      </Layout>
+          <SEO title="Elias Miller Biography" />
+          <h1>Elias Miller Biography</h1>
+          <div className="biographyText" dangerouslySetInnerHTML={{
+            __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
+            }}/>
+        </Layout>
         )} 
 
       />
