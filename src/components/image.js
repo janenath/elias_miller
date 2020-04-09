@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 /*
@@ -13,20 +13,29 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
+const Image = () => (
+  <StaticQuery
+    query={graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "violin.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+      allContentfulHomeImage {
+        edges {
+          node {
+            title
+            image {
+              fluid {
+                src
+              }
+            }
           }
         }
       }
     }
-  `)
+  `}
+  render={data => (
+    <img src={data.allContentfulHomeImage.edges[0].node.image.fluid.src} alt={data.allContentfulHomeImage.edges[0].node.title}/>
+  )}
+  />
+)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-}
 
 export default Image
