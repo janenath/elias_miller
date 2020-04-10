@@ -9,7 +9,7 @@ const schedule = () => (
   <StaticQuery
     query={graphql`
       query {
-        allContentfulEvent {
+        allContentfulEvent(sort: { order: ASC, fields: [sortDate]}) {
           edges {
             node {
               title
