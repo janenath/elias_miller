@@ -35,7 +35,7 @@ const apolloensemble = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="Elias Miller Apollo Ensemble" />
+        <SEO title="Apollo Ensemble" />
         <h1>About Apollo Ensemble</h1>
         <img src={data.allContentfulApolloLogo.edges[0].node.image.fluid.src} alt={data.allContentfulApolloLogo.edges[0].node.title}/>
         <p dangerouslySetInnerHTML={{

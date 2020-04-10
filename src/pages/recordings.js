@@ -33,7 +33,7 @@ const recordings = () => (
           <div className="mediaContainer">
             <h3>{node.title}</h3>
             <h4>{node.date}</h4>
-            <iframe title={node.title} width="600" height="400" src={node.link}/>
+            <iframe title={node.title} width="600" height="400" src={node.link}></iframe>
             {node.caption && 
             <p dangerouslySetInnerHTML={{
               __html: node.caption.childMarkdownRemark.html,
