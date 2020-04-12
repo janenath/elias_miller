@@ -12,6 +12,7 @@ $body-background-color: $black;
 $body-color: $white;
 $strong-color: $white;
 $link: $gold;
+$link-hover: $white;
 
 $navbar-background-color: $black;
 $navbar-item-color: $white;
@@ -37,6 +38,13 @@ $navbar-dropdown-background-color: $black;
 
 $title-color: $white;
 $subtitle-color: $gold;
+
+.input {
+    margin-bottom: 1rem;
+}
+$input-color: $black;
+$input-background-color: $white;
+$label-color: $white;
 
 $footer-background-color: $black;
 $footer-color: $white;

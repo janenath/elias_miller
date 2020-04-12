@@ -29,7 +29,7 @@ const apolloensemble = () => (
         <SEO title="Apollo Ensemble" />
         <h1 className="title">About Apollo Ensemble</h1>
         <div className="section has-background-dark">
-          <img className="image" src={Logo} width="400px"/>
+          <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={Logo} width="400px"/></a>
           <p dangerouslySetInnerHTML={{
             __html: data.allContentfulApolloDescription.edges[0].node.apolloDescriptionText.childMarkdownRemark.html,
           }}/>
