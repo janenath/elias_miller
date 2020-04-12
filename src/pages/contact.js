@@ -8,7 +8,7 @@ const contact = () => (
   <StaticQuery
     query={graphql`
       query {
-        allContentfulContact {
+        allContentfulEmail {
           edges {
             node {
               email
@@ -21,8 +21,8 @@ const contact = () => (
   render={data => (
     <Layout>
       <SEO title="Contact Elias Miller" />
-      <h1>Contact</h1>
-      <a href={`mailto:${data.allContentfulContact.edges[0].node.email}`}>email Elias Miller</a>
+      <h1 className="title">Contact</h1>
+      <a href={`mailto:${data.allContentfulEmail.edges[0].node.email}`}>email Elias Miller</a>
     </Layout>
   )}
   />

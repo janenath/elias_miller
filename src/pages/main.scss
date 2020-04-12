@@ -7,19 +7,40 @@ $black: #2e2e2f;
 $gold: #c0b283;
 
 $family-sans-serif: "Montserrat", sans-serif;
-$link: $gold;
 
 $body-background-color: $black;
 $body-color: $white;
-$navbar-item-color: $white;
-$navbar-dropdown-background-color: $gold;
+$strong-color: $white;
+$link: $gold;
 
-h1 {
-    margin: 5em;
+$navbar-background-color: $black;
+$navbar-item-color: $white;
+$navbar-item-hover-background-color: $black;
+$navbar-dropdown-background-color: $black;
+
+
+.section {
+    margin-bottom: 1rem;
+
 }
-.biographyText p {
-    margin-bottom: 1em;
+.biography{
+    p {
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
+
+.image {
+    margin: 0 auto 2rem auto;
+}
+
+
+$title-color: $white;
+$subtitle-color: $gold;
+
+$footer-background-color: $black;
+$footer-color: $white;
+
 
 
 

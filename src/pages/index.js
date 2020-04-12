@@ -1,18 +1,20 @@
 import React from "react"
+import { useStaticQuery, graphql, StaticQuery } from "gatsby"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import "./main.scss"
 
+import Conducting from "../images/conducting.jpg"
+
 const IndexPage = () => (
-  <Layout>
+
+    <Layout>
     <SEO title="Home" />
-    <div style={{ maxWidth: `100vw`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-  </Layout>
+    <img src={Conducting} alt="Elias Miller" width="100%"/>
+    </Layout>
+
 )
 
 export default IndexPage

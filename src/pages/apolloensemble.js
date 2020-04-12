@@ -4,22 +4,13 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import Logo from "../images/apollo-ensemble.jpg"
+
+
 const apolloensemble = () => (
   <StaticQuery
     query={graphql`
     query {
-        allContentfulApolloLogo {
-          edges {
-            node {
-              title
-              image {
-                fluid {
-                  src
-                }
-              }
-            }
-          }
-        }
       allContentfulApolloDescription {
         edges {
           node {
@@ -36,11 +27,13 @@ const apolloensemble = () => (
     render={data => (
       <Layout>
         <SEO title="Apollo Ensemble" />
-        <h1>About Apollo Ensemble</h1>
-        <img src={data.allContentfulApolloLogo.edges[0].node.image.fluid.src} alt={data.allContentfulApolloLogo.edges[0].node.title}/>
-        <p dangerouslySetInnerHTML={{
-          __html: data.allContentfulApolloDescription.edges[0].node.apolloDescriptionText.childMarkdownRemark.html,
-        }}/>
+        <h1 className="title">About Apollo Ensemble</h1>
+        <div className="section has-background-dark">
+          <img className="image" src={Logo} width="400px"/>
+          <p dangerouslySetInnerHTML={{
+            __html: data.allContentfulApolloDescription.edges[0].node.apolloDescriptionText.childMarkdownRemark.html,
+          }}/>
+        </div>
       </Layout>
     )}
     />

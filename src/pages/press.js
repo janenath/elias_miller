@@ -27,16 +27,16 @@ const press = () => (
   render={data => 
     (<Layout>
       <SEO title="Elias Miller Press" />
-      <h1>Press</h1>
-      
+      <h1 className="title">Press</h1>
         {data.allContentfulPress.edges.map(({ node }) =>(
-          <div className="reviewContainer">
-            <h3 dangerouslySetInnerHTML={{
+          <div className="section has-background-dark">
+            <h3 className="subtitle" dangerouslySetInnerHTML={{
               __html: node.publication,
             }}/>
             <h4 dangerouslySetInnerHTML={{
                 __html: node.date,
               }}/>
+            <br/>
             <p dangerouslySetInnerHTML={{
                 __html: node.pressQuote.childMarkdownRemark.html,
               }}/>
