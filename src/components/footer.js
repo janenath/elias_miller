@@ -9,15 +9,17 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => (
 <footer className="footer">
-    <div className="content has-text-centered">
+    <div className="footerContainer">
         © {new Date().getFullYear()} Elias Miller
         <br/>
-        <span className="icon is-large">
+        <div className="iconsContainer">
+        <div className="iconContainer">
             <a href="https://www.facebook.com/pages/category/Orchestra/Apollo-Ensemble-of-Boston-2230079597009384/" target="_blank"><FontAwesomeIcon icon={faFacebook}/></a>
-        </span>
-        <span className="icon is-large">
+        </div>
+        <div className="iconContainer">
             <a href="https://www.instagram.com/unrealeliasmiller/?hl=en/" target="_blank"><FontAwesomeIcon icon={faInstagram}/></a>
-        </span>
+        </div>
+        </div>
     </div>
 </footer>
 )

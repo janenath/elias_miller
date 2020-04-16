@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Headshot from "../images/headshot.jpg"
+import Headshot from "../images/headshot.png"
 
 
 const Biography = () => (

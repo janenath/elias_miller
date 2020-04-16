@@ -1,55 +1,135 @@
-@charset "utf-8";
+//variables
+$yellow: #f7daa4;
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Raleway:300,400,700&display=swap');
+$playfair: 'Playfair Display', serif;
+$raleway: 'Raleway', sans-serif;
 
-$white: #e2e3e4;
-$black: #2e2e2f;
-$gold: #c0b283;
-
-$family-sans-serif: "Montserrat", sans-serif;
-
-$body-background-color: $black;
-$body-color: $white;
-$strong-color: $white;
-$link: $gold;
-$link-hover: $white;
-
-$navbar-background-color: $black;
-$navbar-item-color: $white;
-$navbar-item-hover-background-color: $black;
-$navbar-dropdown-background-color: $black;
-
-
-.section {
-    margin-bottom: 1rem;
-
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: $raleway;
+    text-decoration: none;
 }
-.biography{
-    p {
-        margin: 1rem;
-        padding: 1rem;
+.logo {
+    width: 100vw;
+}
+.navbar {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    justify-items: center;
+    letter-spacing: .1em;
+}
+.burger {
+    display: none;
+}
+@media (max-width: 700px) {
+    header {
+        grid-template-areas: "logo burger" "nav nav";
+    }
+    .navbar {
+        grid-template-rows: repeat(4,auto);
+        grid-template-columns: none;
+        grid-row-gap: 20px;
+    }
+    .burger {
+        display: block;
+    }
+}
+.indexContainer {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    .headshot {
+        width: 400px;
+        width: 400px;
+        margin: 100px;
+    }
+    .summaryContainer {
+        display: flex;
+        align-items: center;
+    }
+    .bioSummary {
+        font-size: 1.5em;
+        text-align: center;
+        line-height: 1.5;
+        letter-spacing: .1em;
+    }
+    @media (max-width: 700px) {
+        display: block;
+        margin: 10%;
+        .headshot {
+            width: 200px;
+            display: block;
+            margin: 10% auto;
+        }
+        .bioSummary {
+            font-size: 1em;
+        }
     }
 }
 
-.image {
-    margin: 0 auto 2rem auto;
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5em;
+    border-top: $yellow 10px solid;
+}
+.iconsContainer {
+    display: flex;
+}
+.iconContainer {
+    padding: 1.5em;
 }
 
 
-$title-color: $white;
-$subtitle-color: $gold;
+// $body-background-color: $black;
+// $body-color: $white;
+// $strong-color: $white;
+// $link: $gold;
+// $link-hover: $white;
 
-.input {
-    margin-bottom: 1rem;
-}
-$input-color: $black;
-$input-background-color: $white;
-$label-color: $white;
-
-$footer-background-color: $black;
-$footer-color: $white;
+// $navbar-background-color: $black;
+// $navbar-item-color: $white;
+// $navbar-item-hover-background-color: $black;
+// $navbar-dropdown-background-color: $black;
 
 
+// .section {
+//     margin-bottom: 1rem;
+
+// }
+// .biography{
+//     p {
+//         margin: 1rem;
+//         padding: 1rem;
+//     }
+// }
+
+// .image {
+//     margin: 0 auto 2rem auto;
+// }
 
 
-@import "~bulma/bulma.sass";
+// $title-color: $white;
+// $subtitle-color: $gold;
+
+// .input {
+//     margin-bottom: 1rem;
+// }
+// $input-color: $black;
+// $input-background-color: $white;
+// $label-color: $white;
+
+// $footer-background-color: $black;
+// $footer-color: $white;
+
+
+
+
+// @import "~bulma/bulma.sass";
