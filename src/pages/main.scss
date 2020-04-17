@@ -15,6 +15,15 @@ $raleway: 'Raleway', sans-serif;
 .logo {
     width: 100vw;
 }
+.hamburger {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+        @media (min-width: 700px) {
+            display: none;
+        }
+}
 .navbar {
     grid-area: nav;
     display: grid;
@@ -23,9 +32,18 @@ $raleway: 'Raleway', sans-serif;
     justify-items: center;
     letter-spacing: .1em;
 }
-.burger {
+.false {
     display: none;
+    @media (min-width: 700px) {
+        grid-area: nav;
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        align-items: center;
+        justify-items: center;
+        letter-spacing: .1em;
+    }
 }
+
 @media (max-width: 700px) {
     header {
         grid-template-areas: "logo burger" "nav nav";

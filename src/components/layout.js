@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
     <div className="container">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="section">
-        <div className="container has-text-centered has-background-black">{children}</div>
+        <div className="container">{children}</div>
       </div>
       <Footer className="footer"/>
     </div>
