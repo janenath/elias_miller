@@ -29,12 +29,12 @@ const recordings = () => (
   <Layout>
     <SEO title="Elias Miller Recordings" />
     <h1 className="title">Recordings</h1>
+    <div className="section boxed">
     {data.allContentfulMedia.edges.map(({ node }) =>(
-          <div className="section has-background-dark">
-            <h3 className="subtitle is-size-4">{node.title}</h3>
-            <h4 className="is-size-5">{node.date}</h4>
-            <br/>
-            <iframe className="has-ratio" title={node.title} width="600" height="400" src={node.link}></iframe>
+          <div>
+            <h2>{node.title}</h2>
+            <br />
+            <h3>{node.date}</h3>
             {node.caption && 
             <div>
               <br />
@@ -44,9 +44,13 @@ const recordings = () => (
             </div>
 
             }
+            <br/>
+            <iframe title={node.title} width="600" height="400" src={node.link}></iframe>
+
           </div>
         )
         )}
+        </div>
   </Layout>
   )}
   />
