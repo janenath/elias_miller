@@ -34,13 +34,15 @@ const schedule = () => (
   render={data => (
   <Layout>
     <SEO title="Elias Miller Schedule" />
+    <div className="section">
     <h1 className="title">Upcoming Event Schedule</h1>
+    <div className="section boxed">
     {data.allContentfulEvent.edges.map(({ node }) =>(
-      <div className="section has-background-dark">
-        <h3 className="subtitle is-size-4">{node.title}</h3>
-        <p className="is-size-5">{node.role}</p>
+      <div>
+        <h3>{node.title}</h3>
+        <p>{node.role}</p>
         <br/>
-        <p className="is-size-5 has-text-weight-bold" dangerouslySetInnerHTML={{
+        <p dangerouslySetInnerHTML={{
           __html: node.dates.childMarkdownRemark.html,
           }}/>
         {node.location && 
@@ -60,6 +62,8 @@ const schedule = () => (
       </div>
 )
 )}
+</div>
+  </div>
   </Layout>
 )}
 />
