@@ -55,12 +55,11 @@ iframe {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 10px;
+    margin: 3% 5%;
     padding: 10px;
     p {
         line-height: 1.5;
         text-align: center;
-        margin-bottom: 0.5em;
     }
 }
 .boxed > * {
@@ -68,12 +67,25 @@ iframe {
     width: 80%;
     padding: 3%;
 }
+
 .about {
-    padding: 50px 20% 50px 20%;
-    border-bottom: 5px solid $yellow;
+    width: 60vw;
+    padding: 50px;
+    border-top: 5px solid $yellow;
+    a {
+        text-decoration: underline;
+    }
 }
-.apollo {
-    border: none;
+.schedule {
+    h3 {
+        margin-bottom: 10px;
+    }
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: none;
+    }
 }
 .readMore {
     text-decoration: underline;
@@ -86,6 +98,8 @@ iframe {
     flex-direction: column;
     align-items: center;
 }
+
+
 @media (max-width: 700px) {
     header {
         grid-template-areas: "nav nav";
@@ -129,25 +143,52 @@ iframe {
         }
     }
 }
-
+.form {
+    width: 50vw;
+}
 form {
-    font-size: 1.2em;
+    label {
+        font-size: 1.5em;
+    }
+    textarea {
+        line-height: 150%;
+        height: 300px;
+        width: 80%;
+        font-size: 1em;
+        padding: 20px;
+        border: 2px solid black;
+        textarea:focus {
+            outline: none;
+        }
+    }
+    input {
+        line-height: 150%;
+        height: 2em;
+        width: 80%;
+        padding: 20px;
+        font-size: 1em;
+        border: 2px solid black;
+    }
     .field {
         padding: 20px;
     }
     .inputContainer {
         display: flex;
+        justify-content: center;
+        margin: 2em;
     }
     button {
-        padding: 0.5em;
+        padding: 1em;
         background: white;
         color: black;
-        font-size: 1.2em;
-        border: 5px solid black;
+        font-size: 1em;
+        border: 2px solid black;
+        border-radius: 5px;
     }
-}
-form > * {
-    padding: 2em;
+    button:hover {
+        background: $yellow;
+        cursor: pointer;
+    }
 }
 .footerContainer {
     display: flex;
@@ -162,50 +203,3 @@ form > * {
 .iconContainer {
     padding: 1.5em;
 }
-
-
-// $body-background-color: $black;
-// $body-color: $white;
-// $strong-color: $white;
-// $link: $gold;
-// $link-hover: $white;
-
-// $navbar-background-color: $black;
-// $navbar-item-color: $white;
-// $navbar-item-hover-background-color: $black;
-// $navbar-dropdown-background-color: $black;
-
-
-// .section {
-//     margin-bottom: 1rem;
-
-// }
-// .biography{
-//     p {
-//         margin: 1rem;
-//         padding: 1rem;
-//     }
-// }
-
-// .image {
-//     margin: 0 auto 2rem auto;
-// }
-
-
-// $title-color: $white;
-// $subtitle-color: $gold;
-
-// .input {
-//     margin-bottom: 1rem;
-// }
-// $input-color: $black;
-// $input-background-color: $white;
-// $label-color: $white;
-
-// $footer-background-color: $black;
-// $footer-color: $white;
-
-
-
-
-// @import "~bulma/bulma.sass";

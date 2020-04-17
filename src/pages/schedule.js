@@ -13,6 +13,7 @@ const schedule = () => (
           edges {
             node {
               title
+              link
               role
               dates {
                 childMarkdownRemark {
@@ -38,8 +39,8 @@ const schedule = () => (
     <h1 className="title">Upcoming Event Schedule</h1>
     <div className="section boxed">
     {data.allContentfulEvent.edges.map(({ node }) =>(
-      <div>
-        <h3>{node.title}</h3>
+      <div className="schedule">
+        <h3><a href={node.link} target="_blank">{node.title}</a></h3>
         <p>{node.role}</p>
         <br/>
         <p dangerouslySetInnerHTML={{
