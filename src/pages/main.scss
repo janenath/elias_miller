@@ -15,6 +15,13 @@ $raleway: 'Raleway', sans-serif;
 .logo {
     width: 100vw;
 }
+h1 {
+    display: inline;
+    border-bottom: 5px solid $yellow;
+}
+iframe {
+    border: none;
+}
 .hamburger {
     display: flex;
     justify-content: center;
@@ -62,7 +69,14 @@ $raleway: 'Raleway', sans-serif;
     padding: 3%;
 }
 .about {
-    margin: 0 10%;
+    padding: 50px 20% 50px 20%;
+    border-bottom: 5px solid $yellow;
+}
+.apollo {
+    border: none;
+}
+.readMore {
+    text-decoration: underline;
 }
 .section > * {
     margin: 20px;
@@ -116,7 +130,25 @@ $raleway: 'Raleway', sans-serif;
     }
 }
 
-
+form {
+    font-size: 1.2em;
+    .field {
+        padding: 20px;
+    }
+    .inputContainer {
+        display: flex;
+    }
+    button {
+        padding: 0.5em;
+        background: white;
+        color: black;
+        font-size: 1.2em;
+        border: 5px solid black;
+    }
+}
+form > * {
+    padding: 2em;
+}
 .footerContainer {
     display: flex;
     flex-direction: column;

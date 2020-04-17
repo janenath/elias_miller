@@ -28,6 +28,7 @@ const About = () => (
                     }
                     date(formatString: "MMMM Do, YYYY")
                     publication
+                    link
                   }
                 }
               }
@@ -53,11 +54,11 @@ const About = () => (
                     __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
                 }}/>
             </div>
-            <div className="section">
+            <div className="section about">
                 <h1 className="title">Press</h1>
                 {data.allContentfulPress.edges.map(({ node }) => (
                     <div className="subSection">
-                    <h3 className="subtitle" dangerouslySetInnerHTML={{
+                    <h3 dangerouslySetInnerHTML={{
                     __html: node.publication,
                 }}/>
                 <h4 dangerouslySetInnerHTML={{
@@ -67,11 +68,14 @@ const About = () => (
                 <p dangerouslySetInnerHTML={{
                     __html: node.pressQuote.childMarkdownRemark.html,
                 }}/>
+                <br/>
+                <a className="readMore" href={node.link} target="_blank">Read More</a>
+                <br/>
                 </div>
                 )
                 )}
             </div>
-            <div className="section">
+            <div className="section about apollo">
                 <h1 className="title">About Apollo Ensemble</h1>
                 <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={Logo} width="400px"/></a>
                 <p dangerouslySetInnerHTML={{

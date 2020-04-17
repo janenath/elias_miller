@@ -9,33 +9,31 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const contact = () => (
     <Layout>
       <SEO title="Contact Elias Miller" />
-      <h1 className="title">Contact</h1>
-      <div className="section has-background-dark has-text-left">
+      <h1>Contact</h1>
+      <div className="section boxed">
         <form method="post" netlify-honeypot="bot-field" data-netlify="true">
           <input type="hidden" name="bot-field" />
           <div className="field">
             <label className="label">Name</label>
-            <div className="control">
+            <div>
               <input className="input" type="text" placeholder="Name"/>
             </div>
           </div>
           <div className="field">
             <label className="label">Email</label>
-            <div className="control has-icons-left">
+            <div className="inputContainer">
+              <FontAwesomeIcon icon={faEnvelope} />
               <input className="input" type="email" placeholder="Email"/>
-              <span className="icon is-small is-left">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </span>
             </div>
           </div>
           <div className="field">
             <label className="label">Message</label>
-            <div className="control">
+            <div>
               <textarea className="textarea" placeholder="Message"></textarea>
             </div>
           </div>
-          <div className="control">
-            <button className="button is-link">Submit</button>
+          <div>
+            <button className="button">Submit</button>
           </div>
         </form>
       </div>
