@@ -32,7 +32,7 @@ const recordings = () => (
     <h1>Recordings</h1>
     <div className="recordings section boxed">
     {data.allContentfulMedia.edges.map(({ node }) =>(
-          <div>
+          <div className="recording">
             <h2>{node.title}</h2>
             <br />
             <h3>{node.date}</h3>
