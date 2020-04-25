@@ -30,7 +30,7 @@ const recordings = () => (
     <SEO title="Elias Miller Recordings" />
     <div className="section">
     <h1>Recordings</h1>
-    <div className="section boxed">
+    <div className="recordings section boxed">
     {data.allContentfulMedia.edges.map(({ node }) =>(
           <div>
             <h2>{node.title}</h2>

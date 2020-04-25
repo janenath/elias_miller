@@ -8,7 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default class Header extends React.Component {
    state = {
-      navActive: true
+      navActive: false
     }
   toggleNav = (e) => {
       this.setState({navActive: !this.state.navActive})

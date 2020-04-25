@@ -5,33 +5,64 @@ $yellow: #f7daa4;
 $playfair: 'Playfair Display', serif;
 $raleway: 'Raleway', sans-serif;
 
+//general
 * {
     margin: 0;
     padding: 0;
     color: black;
     font-family: $raleway;
     text-decoration: none;
+    box-sizing: border-box;
 }
+h1 {
+    font-size: 2em;
+    display: inline-block;
+    font-family: $playfair;
+    padding: 5px;
+    @media (max-width: 700px) {
+        font-size: 1.5em;
+        padding: 2px;
+    }
+}
+h3 {
+    font-size: 0.8em;
+    @media (max-width: 700px) {
+        font-size: 0.7em;
+    }
+}
+h4 {
+    font-size: 0.7em;
+    @media (max-width: 700px) {
+        font-size: 0.6em;
+    }
+}
+a {
+    font-size: 0.8em;
+    line-height: 1.7;
+    @media (max-width: 700px) {
+        font-size: 0.8em;
+    }
+}
+p {
+    font-size: 0.8em;
+    line-height: 1.7;
+    @media (max-width: 700px) {
+        font-size: 0.8em;
+    }
+    a {
+        font-size: inherit;
+        line-height: inherit;
+        text-decoration: underline;
+    }
+}
+
+
+//header and nav
 .logo {
     width: 100vw;
 }
-h1 {
-    display: inline;
-    border-bottom: 5px solid $yellow;
-}
-iframe {
-    border: none;
-}
-.hamburger {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    font-size: 30px;
-        @media (min-width: 700px) {
-            display: none;
-        }
-}
 .navbar {
+    font-size: 1.2em;
     grid-area: nav;
     display: grid;
     grid-template-columns: repeat(4,auto);
@@ -50,33 +81,140 @@ iframe {
         letter-spacing: .1em;
     }
 }
+.true {
+    background: $yellow;
+    padding: 10px;
+    color: white;
+}
+.hamburger {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-size: 24px;
+    @media (min-width: 700px) {
+        display: none;
+    }
+    @media (max-width: 450px) {
+        font-size: 18px;
+    }
+}
+@media (max-width: 700px) {
+    header {
+        grid-template-areas: "nav nav";
+    }
+    .navbar {
+        grid-template-rows: repeat(4,auto);
+        grid-template-columns: none;
+        grid-row-gap: 20px;
+    }
+}
+
+
+//main
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 8em;
+    @media (max-width: 800px) {
+        margin: 2% 0;
+    }
+}
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 3% 5%;
+    margin: 3% auto;
     padding: 10px;
-    p {
-        line-height: 1.5;
-        text-align: center;
+    width: 80%;
+    @media (max-width: 700px) {
+        width: 100%;
+        padding: 0 40px;
+        margin: 3% 0;
     }
+}
+.subSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 .boxed > * {
     border: 5px solid $yellow;
     width: 80%;
     padding: 3%;
+    @media (max-width: 700px) {
+        width: 100%;
+    }
 }
 
+//footer
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5em;
+    border-top: $yellow 10px solid;
+}
+.iconsContainer {
+    display: flex;
+}
+.iconContainer {
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+//index
+.indexContainer {
+    display: flex;
+    justify-content: center;
+    .headshot {
+        margin: 0 50px;
+    }
+    .summaryContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bioSummary {
+        font-size: 0.9em;
+        text-align: center;
+        line-height: 1.5;
+        letter-spacing: .1em;
+    }
+    @media (max-width: 800px) {
+        display: block;
+        .headshot {
+            width: 150px;
+            display: block;
+            margin: 5% auto;
+        }
+        .bioSummary {
+            font-size: 0.8em;
+            margin: 0 8%;
+        }
+    }
+}
+
+
+//about
 .about {
-    width: 60vw;
+    width: 50vw;
     padding: 50px;
     border-top: 5px solid $yellow;
     a {
         text-decoration: underline;
     }
 }
+.biography > * {
+   margin: 20px 0;
+}
+
+//schedule
 .schedule {
+    margin-bottom: 20px;
     h3 {
         margin-bottom: 10px;
     }
@@ -90,65 +228,19 @@ iframe {
 .readMore {
     text-decoration: underline;
 }
-.section > * {
-    margin: 20px;
-}
-.subSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+
+//recordings
+iframe {
+    border: none;
+    width: 100%;
 }
 
 
-@media (max-width: 700px) {
-    header {
-        grid-template-areas: "nav nav";
-    }
-    .navbar {
-        grid-template-rows: repeat(4,auto);
-        grid-template-columns: none;
-        grid-row-gap: 20px;
-    }
-}
-
-.indexContainer {
-    display: flex;
-    justify-content: center;
-    margin: 100px;
-    .headshot {
-        width: 400px;
-        width: 400px;
-        margin: 100px;
-    }
-    .summaryContainer {
-        display: flex;
-        align-items: center;
-    }
-    .bioSummary {
-        font-size: 1.5em;
-        text-align: center;
-        line-height: 1.5;
-        letter-spacing: .1em;
-    }
-    @media (max-width: 700px) {
-        display: block;
-        margin: 10%;
-        .headshot {
-            width: 200px;
-            display: block;
-            margin: 10% auto;
-        }
-        .bioSummary {
-            font-size: 1em;
-        }
-    }
-}
-.form {
-    width: 50vw;
-}
+//contact
 form {
     label {
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
     textarea {
         line-height: 150%;
@@ -166,19 +258,19 @@ form {
         height: 2em;
         width: 80%;
         padding: 20px;
-        font-size: 1em;
+        font-size: 0.8em;
         border: 2px solid black;
-    }
-    .field {
-        padding: 20px;
     }
     .inputContainer {
         display: flex;
         justify-content: center;
-        margin: 2em;
+        margin: 1em 0;
+    }
+    .field {
+        margin-bottom: 30px;
     }
     button {
-        padding: 1em;
+        padding: 0.8em;
         background: white;
         color: black;
         font-size: 1em;
@@ -189,17 +281,4 @@ form {
         background: $yellow;
         cursor: pointer;
     }
-}
-.footerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1.5em;
-    border-top: $yellow 10px solid;
-}
-.iconsContainer {
-    display: flex;
-}
-.iconContainer {
-    padding: 1.5em;
 }
