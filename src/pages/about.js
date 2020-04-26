@@ -48,13 +48,13 @@ const About = () => (
       render={data => (
         <Layout>
             <SEO title="About Elias Miller" />
-            <div className="section">
+            <div className="bio section">
               <h1>Biography</h1>
               <div className="biography" dangerouslySetInnerHTML={{
                   __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
               }}/>
             </div>
-            <div className="section">
+            <div className="bio section">
                 <h1 className="title">Press</h1>
                 {data.allContentfulPress.edges.map(({ node }) => (
                     <div className="subSection">
@@ -75,7 +75,7 @@ const About = () => (
                 )
                 )}
             </div>              
-            <div className="section">
+            <div className="bio section">
               <h1 className="title">About Apollo Ensemble</h1>
               <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={Logo} width="80%"/></a>
               <p dangerouslySetInnerHTML={{

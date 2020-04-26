@@ -31,9 +31,9 @@ h3 {
     }
 }
 h4 {
-    font-size: 0.7em;
+    font-size: 0.9em;
     @media (max-width: 700px) {
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 }
 a {
@@ -60,15 +60,24 @@ p {
 //header and nav
 .logo {
     width: 100vw;
+    max-width: 1300px;
+    display: block;
+    margin: 0 auto;
 }
 .navbar {
-    font-size: 1.2em;
+    font-size: 1.8em;
     grid-area: nav;
     display: grid;
     grid-template-columns: repeat(4,auto);
     align-items: center;
     justify-items: center;
     letter-spacing: .1em;
+    @media (max-width: 1000px) {
+        font-size: 1.2em;
+    }
+    @media (min-width: 1500px) {
+        margin: 0 150px;
+    }
 }
 .false {
     display: none;
@@ -85,11 +94,11 @@ p {
     background: $yellow;
     padding: 10px;
     color: white;
+    margin-top: 10px;
 }
 .hamburger {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
     font-size: 24px;
     @media (min-width: 700px) {
         display: none;
@@ -114,7 +123,7 @@ p {
 .main {
     display: flex;
     flex-direction: column;
-    margin: 5% 8em;
+    margin: 5% auto;
     @media (max-width: 800px) {
         margin: 2% 0;
     }
@@ -126,7 +135,7 @@ p {
     text-align: center;
     margin: 3% auto;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     @media (max-width: 800px) {
         width: 100%;
         margin: 3% 0;
@@ -154,7 +163,7 @@ p {
     flex-direction: column;
     align-items: center;
     padding-top: 1.5em;
-    border-top: $yellow 10px solid;
+    background: $yellow;
 }
 .iconsContainer {
     display: flex;
@@ -168,6 +177,7 @@ p {
 .indexContainer {
     display: flex;
     justify-content: center;
+    margin: 20px 50px;
     .headshot {
         margin: 0 50px;
         width: 300px;
@@ -189,7 +199,7 @@ p {
     }
     @media (max-width: 1200px) {
         .headshot {
-            width: 300px;
+            width: 250px;
             display: block;
             margin: 5% auto;
         }
@@ -199,12 +209,12 @@ p {
             margin: 0 8%;
         }
     }
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         display: block;
         .headshot {
             width: 150px;
             display: block;
-            margin: 5% auto;
+            margin: 0 auto 10% auto;
         }
         .bioSummary {
             font-size: 0.7em;
@@ -224,7 +234,7 @@ p {
     }
 }
 .biography > * {
-   margin: 20px 0;
+   margin: 10px 40px;
 }
 
 //schedule
@@ -276,7 +286,7 @@ form {
         height: 2em;
         width: 80%;
         padding: 20px;
-        font-size: 0.8em;
+        font-size: 1em;
         border: 2px solid black;
     }
     .inputContainer {
