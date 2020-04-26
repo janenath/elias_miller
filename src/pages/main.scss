@@ -60,9 +60,12 @@ p {
 //header and nav
 .logo {
     width: 100vw;
-    max-width: 1300px;
+    max-width: 1000px;
     display: block;
-    margin: 20px auto 0 auto;
+    margin: 50px auto 0 auto;
+    @media (max-width: 700px) {
+        margin: 20px auto 0 auto;
+    }
 }
 .navbar {
     font-size: 1.8em;
@@ -77,6 +80,7 @@ p {
     }
     @media (min-width: 1500px) {
         margin: 0 150px;
+        font-size: 1.5em;
     }
 }
 .false {
@@ -123,7 +127,10 @@ p {
 .main {
     display: flex;
     flex-direction: column;
-    margin: 5% auto;
+
+    @media (min-width: 1200px) {
+        margin: 2% auto;
+    }
     @media (max-width: 800px) {
         margin: 2% 0;
     }
@@ -162,7 +169,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1.5em;
+    padding-top: 3em;
+    padding-bottom: 5em;
     background: $yellow;
 }
 .iconsContainer {
@@ -177,7 +185,7 @@ p {
 .indexContainer {
     display: flex;
     justify-content: center;
-    margin: 20px 50px;
+    margin: 100px;
     .headshot {
         margin: 0 50px;
         width: 300px;
@@ -198,8 +206,15 @@ p {
     .bioQuote {
         font-style: italic;
     }
+
     @media(min-width: 1500px){
-        margin: 20px 300px;
+        margin: 0 300px;
+        padding: 0;
+        .headshot {
+            width: 350px;
+            display: block;
+            margin: 5% 10%;
+        }
         .biosummary {
             font-size: 1.5em;
         }
@@ -216,7 +231,9 @@ p {
             margin: 0 8%;
         }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
+        margin: 20px 0;
+        padding: 0;
         display: block;
         .headshot {
             width: 150px;
