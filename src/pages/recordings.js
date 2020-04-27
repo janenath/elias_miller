@@ -33,9 +33,11 @@ const recordings = () => (
     <div className="recordings section boxed">
     {data.allContentfulMedia.edges.map(({ node }) =>(
           <div className="recording">
-            <h2>{node.title}</h2>
+            <iframe title={node.title} width="600" height="400" src={node.link}></iframe>
+            <br/><br/>
+            <h3>{node.title}</h3>
             <br />
-            <h3>{node.date}</h3>
+            <h4>{node.date}</h4>
             {node.caption && 
             <div>
               <br />
@@ -45,9 +47,8 @@ const recordings = () => (
             </div>
 
             }
-            <br/>
-            <iframe title={node.title} width="600" height="400" src={node.link}></iframe>
-
+            
+      
           </div>
         )
         )}

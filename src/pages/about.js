@@ -32,18 +32,15 @@ const About = () => (
                   }
                 }
               }
-              allContentfulApolloDescription {
-                edges {
-                node {
-                    apolloDescriptionText {
-                    childMarkdownRemark {
-                        html
-                    }
-                    }
+              contentfulApolloDescription {
+                apolloDescriptionText {
+                  childMarkdownRemark {
+                    html
+                  }
                 }
-                }
+              }
             }
-            }
+        
       `}
       render={data => (
         <Layout>
@@ -65,7 +62,7 @@ const About = () => (
                     __html: node.date,
                 }}/>
                 <br/>
-                <p dangerouslySetInnerHTML={{
+                <div dangerouslySetInnerHTML={{
                     __html: node.pressQuote.childMarkdownRemark.html,
                 }}/>
                 <br/>
@@ -79,7 +76,7 @@ const About = () => (
               <h1 className="title">About Apollo Ensemble</h1>
               <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={Logo} width="80%"/></a>
               <p dangerouslySetInnerHTML={{
-                  __html: data.allContentfulApolloDescription.edges[0].node.apolloDescriptionText.childMarkdownRemark.html,
+                  __html: data.contentfulApolloDescription.apolloDescriptionText.childMarkdownRemark.html,
               }}/>
             </div>
 
