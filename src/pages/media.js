@@ -27,9 +27,9 @@ const recordings = () => (
 
   render={data => (
   <Layout>
-    <SEO title="Elias Miller Recordings" />
+    <SEO title="Elias Miller Media" />
     <div className="section">
-    <h1>Recordings</h1>
+    <h1>Media</h1>
     <div className="recordings section boxed">
     {data.allContentfulMedia.edges.map(({ node }) =>(
           <div className="recording">

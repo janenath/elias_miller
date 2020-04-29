@@ -26,7 +26,7 @@ render() {
         <nav className={`navbar + ${this.state.navActive}`}> 
           <Link to="/about/">ABOUT</Link>
           <Link to="/schedule/">SCHEDULE</Link>
-          <Link to="/recordings/">RECORDINGS</Link>
+          <Link to="/media/">MEDIA</Link>
           <Link to="/contact/">CONTACT</Link>
         </nav> 
       </div>
