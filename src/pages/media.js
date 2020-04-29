@@ -11,7 +11,6 @@ const recordings = () => (
       allContentfulMedia(sort: { order: ASC, fields: [order]}) {
         edges {
           node {
-            order
             title
             date(formatString: "MMMM Do, YYYY")
             link
