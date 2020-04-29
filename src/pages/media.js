@@ -8,7 +8,7 @@ const recordings = () => (
   <StaticQuery
   query={graphql`
     query {
-      allContentfulMedia(sort: { order: ASC }) {
+      allContentfulMedia(sort: {fields: order}) {
         edges {
           node {
             title
