@@ -203,9 +203,9 @@ p {
         letter-spacing: .1em;
         width: 70%;
     }
-    .bioQuote {
-        font-style: italic;
-    }
+    .bioSummary > * {
+        margin: 20px 0;
+     }
 
     @media(min-width: 1500px){
         margin: 0 300px;
