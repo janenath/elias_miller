@@ -188,7 +188,8 @@ p {
     margin: 100px;
     .headshot {
         margin: 0 50px;
-        width: 300px;
+        width: 350px;
+        height: auto;
     }
     .summaryContainer {
         display: flex;
@@ -211,7 +212,7 @@ p {
         margin: 0 300px;
         padding: 0;
         .headshot {
-            width: 350px;
+            width: 400px;
             display: block;
             margin: 5% 10%;
         }

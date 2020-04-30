@@ -4,9 +4,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Headshot from "../images/headshot.png"
-import Logo from "../images/apollo-ensemble.jpg"
-
 const About = () => (
   <StaticQuery
       query={graphql`  
@@ -29,6 +26,13 @@ const About = () => (
                     date(formatString: "MMMM Do, YYYY")
                     publication
                     link
+                  }
+                }
+              }
+              contentfulApolloLogo {
+                image {
+                  file {
+                    url
                   }
                 }
               }
@@ -74,7 +78,7 @@ const About = () => (
             </div>              
             <div className="bio section">
               <h1 className="title">About Apollo Ensemble</h1>
-              <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={Logo} width="80%"/></a>
+              <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={data.contentfulApolloLogo.image.file.url} width="50%"/></a>
               <p dangerouslySetInnerHTML={{
                   __html: data.contentfulApolloDescription.apolloDescriptionText.childMarkdownRemark.html,
               }}/>
