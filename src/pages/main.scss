@@ -291,8 +291,12 @@ iframe {
 
 //contact
 form {
-    label {
+    .label {
         font-size: 1.1em;
+        font-weight: bold;
+    }
+    .formInputs {
+        padding-top: 1em;
     }
     textarea {
         line-height: 150%;
@@ -300,6 +304,7 @@ form {
         width: 80%;
         font-size: 1em;
         padding: 20px;
+        margin-top: .4em;
         border: 2px solid black;
         textarea:focus {
             outline: none;
@@ -310,6 +315,7 @@ form {
         height: 2em;
         width: 80%;
         padding: 20px;
+        margin-top: .4em;
         font-size: 1em;
         border: 2px solid black;
     }

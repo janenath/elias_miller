@@ -41,30 +41,44 @@ export default class Contact extends React.Component{
       <div className="section">
       <h1>Contact</h1>
       <div className="section boxed form" id="contact">
-        <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true" onSubmit={this.handleSubmit}>
-        <input type="hidden" name="form-name" value="contact" /> 
-          <input type="hidden" name="bot-field" />
-          <div className="field">
-            <label className="label">Name</label>
-            <div className="inputContainer">
-              <input className="input" type="text" id="name" placeholder="Name" name="name" onChange={this.handleChange}/>
-            </div>
+        <form name="contact" method="post" action="/" data-netlify="true" netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" /> 
+          <div hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
           </div>
-          <div className="field">
-            <label className="label">Email</label>
-            <div className="inputContainer">
+
+          <div className="formInputs">
+          <div className="field" id="name">
+            <label className="label">
+              Name 
+              <br/>
+            <input className="input" type="text" id="name" placeholder="Name" name="name" onChange={this.handleChange}/>
+            </label>
+          </div>
+          <div className="field" id="email">
+            <label className="label">
+              Email
+              <br/>
               <input className="input" type="email" id="email" placeholder="Email" name="email" onChange={this.handleChange}/>
-            </div>
+            </label> 
           </div>
-          <div className="field">
-            <label className="label">Message</label>
-            <div className="inputContainer">
-              <textarea className="textarea" placeholder="Message" id="message" name="message" onChange={this.handleChange}></textarea>
-            </div>
+          <div className="field" id="message">
+            <label className="label">
+              Message
+              <br/>
+              <textarea className="textarea input" id="message" placeholder="Message" name="message" onChange={this.handleChange}/>
+            </label>
           </div>
-          <div>
-            <button className="button">Submit</button>
-          </div>
+        </div>   
+        <div className="button">
+          <button type="submit">send</button>
+        </div>
+
+
+
         </form>
         </div>
       </div>
