@@ -15,20 +15,6 @@ const About = () => (
               }
             }
             }
-            contentfulHeadshot {
-              headshot {
-                file {
-                  url
-                }
-              }
-            }
-            contentfulBioImage {
-              image {
-                file {
-                  url
-                }
-              }
-            }
             allContentfulPress(sort: { order: DESC, fields: [date]}) {
                 edges {
                   node {
@@ -66,11 +52,7 @@ const About = () => (
             <div className="section">
             <h1>Biography</h1>
             <div className="bio section">
-              <div className="bioContainer">
-                <div className="imageContainer">
-                  <img src={data.contentfulHeadshot.headshot.file.url} alt="Elias Miller" className="headshot"/>
-                  <img src={data.contentfulBioImage.image.file.url} alt="Elias Miller Conducting" className="bioImage" />
-                </div>      
+              <div className="bioContainer">   
                 <div className="biography" dangerouslySetInnerHTML={{
                     __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
                 }}/>
