@@ -290,21 +290,18 @@ iframe {
 
 
 //contact
+.formContainer {
+    width: 50%;
+}
 form {
-    .label {
-        font-size: 1.1em;
-        font-weight: bold;
-    }
-    .formInputs {
-        padding-top: 1em;
-    }
+
     textarea {
         line-height: 150%;
         height: 300px;
         width: 80%;
         font-size: 1em;
         padding: 20px;
-        margin-top: .4em;
+        margin: .4em 0;
         border: 2px solid black;
         textarea:focus {
             outline: none;
@@ -325,7 +322,7 @@ form {
         margin: 1em 0;
     }
     .field {
-        margin-bottom: 30px;
+        margin-bottom: 1em;
     }
     button {
         padding: 0.8em;
