@@ -4,7 +4,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const schedule = () => (
+const concerts = () => (
 
   <StaticQuery
     query={graphql`
@@ -34,9 +34,9 @@ const schedule = () => (
 
   render={data => (
   <Layout>
-    <SEO title="Elias Miller Schedule" />
+    <SEO title="Elias Miller Concerts" />
     <div className="section">
-    <h1 className="title">Upcoming Event Schedule</h1>
+    <h1 className="title">Upcoming Concerts</h1>
     <div className="section boxed">
     {data.allContentfulEvent.edges.map(({ node }) =>(
       <div className="schedule">
@@ -69,4 +69,4 @@ const schedule = () => (
 )}
 />
 )
-export default schedule
+export default concerts
