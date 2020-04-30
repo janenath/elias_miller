@@ -13,6 +13,7 @@ $raleway: 'Raleway', sans-serif;
     font-family: $raleway;
     text-decoration: none;
     box-sizing: border-box;
+    // border: 1px green solid;
 }
 h1 {
     font-size: 2em;
@@ -242,7 +243,7 @@ p {
             margin: 0 auto 10% auto;
         }
         .bioSummary {
-            font-size: 0.8em;
+            font-size: 1em;
             margin: 0 8%;
         }
     }
@@ -250,6 +251,50 @@ p {
 
 
 //about
+.bio {
+    font-size: 1em;
+    width: 60vw;
+    text-align: justify;
+    @media (max-width: 1500px) {
+        width: 70vw;   
+    }
+    @media (max-width: 1200px) {
+        width: 80vw;   
+    }
+    @media (max-width: 800px) {
+        width: 90vw;
+    }
+}
+.bioContainer {
+    display: flex;
+    align-items: center;
+    img {
+        width: 20vw;
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
+}
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    // justify-content: space-around;
+    @media (max-width: 800px) {
+        flex-direction: row;
+        width: 100%;
+        img {
+            width: 40vw;
+        }
+        .headshot {
+            display: none;
+        }
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
 .about {
     width: 50vw;
     padding: 50px;
@@ -258,8 +303,20 @@ p {
         text-decoration: underline;
     }
 }
+.biography {
+    height: 100%;
+}
 .biography > * {
    margin: 10px 40px;
+}
+.apolloLogo {
+    width: 40vw;
+    @media (max-width: 1200px) {
+        width: 60vw;
+    }
+    @media (max-width: 800px) {
+        width: 80vw;
+    }
 }
 
 //schedule

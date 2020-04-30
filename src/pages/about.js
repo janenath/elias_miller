@@ -15,6 +15,20 @@ const About = () => (
               }
             }
             }
+            contentfulHeadshot {
+              headshot {
+                file {
+                  url
+                }
+              }
+            }
+            contentfulBioImage {
+              image {
+                file {
+                  url
+                }
+              }
+            }
             allContentfulPress(sort: { order: DESC, fields: [date]}) {
                 edges {
                   node {
@@ -49,11 +63,18 @@ const About = () => (
       render={data => (
         <Layout>
             <SEO title="About Elias Miller" />
+            <div className="section">
+            <h1>Biography</h1>
             <div className="bio section">
-              <h1>Biography</h1>
-              <div className="biography" dangerouslySetInnerHTML={{
-                  __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
-              }}/>
+              <div className="bioContainer">
+                <div className="imageContainer">
+                  <img src={data.contentfulHeadshot.headshot.file.url} alt="Elias Miller" className="headshot"/>
+                  <img src={data.contentfulBioImage.image.file.url} alt="Elias Miller Conducting" className="bioImage" />
+                </div>      
+                <div className="biography" dangerouslySetInnerHTML={{
+                    __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
+                }}/>
+              </div>  
             </div>
             <div className="bio section">
                 <h1 className="title">Press</h1>
@@ -78,12 +99,12 @@ const About = () => (
             </div>              
             <div className="bio section">
               <h1 className="title">About Apollo Ensemble</h1>
-              <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image" src={data.contentfulApolloLogo.image.file.url} width="50%"/></a>
+              <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image apolloLogo" src={data.contentfulApolloLogo.image.file.url}/></a>
               <p dangerouslySetInnerHTML={{
                   __html: data.contentfulApolloDescription.apolloDescriptionText.childMarkdownRemark.html,
               }}/>
             </div>
-
+            </div>
         </Layout>
         )} 
 
