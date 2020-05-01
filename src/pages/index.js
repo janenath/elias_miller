@@ -30,7 +30,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div className="indexContainer">
         <div className="headshotContainer">
-            <img src={data.contentfulHeadshot.headshot.file.url} alt="Elias Miller" className="headshot"/>
+            <img src={`${data.contentfulHeadshot.headshot.file.url}?w=400&h=530`} alt="Elias Miller" className="headshot"/>
         </div>
         <div className="summaryContainer">
         <p className="bioSummary" dangerouslySetInnerHTML={{
