@@ -33,7 +33,7 @@ const IndexPage = () => (
             <img src={`${data.contentfulHeadshot.headshot.file.url}?w=400&h=530`} alt="Elias Miller" className="headshot"/>
         </div>
         <div className="summaryContainer">
-        <p className="bioSummary" dangerouslySetInnerHTML={{
+        <div className="bioSummary" dangerouslySetInnerHTML={{
             __html: data.contentfulHomeText.homeText.childMarkdownRemark.html,
         }}/>
         </div>
