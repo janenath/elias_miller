@@ -17,7 +17,7 @@ const IndexPage = () => (
             }
         }
         contentfulHomeText {
-            text {
+            homeText {
               childMarkdownRemark {
                 html
               }
@@ -34,7 +34,7 @@ const IndexPage = () => (
         </div>
         <div className="summaryContainer">
         <p className="bioSummary" dangerouslySetInnerHTML={{
-            __html: data.contentfulHomeText.text.childMarkdownRemark.html
+            __html: data.contentfulHomeText.homeText.childMarkdownRemark.html,
         }}/>
         </div>
     </div>
