@@ -16,10 +16,14 @@ const IndexPage = () => (
                 }
             }
         }
-        contentfulHomeText {
-            text {
-              childMarkdownRemark {
-                html
+        allContentfulHomeText {
+            edges {
+              node {
+                text {
+                  childMarkdownRemark {
+                    html
+                  }
+                }
               }
             }
           }
@@ -34,7 +38,7 @@ const IndexPage = () => (
         </div>
         <div className="summaryContainer">
         <p className="bioSummary" dangerouslySetInnerHTML={{
-            __html: data.contentfulHomeText.text.childMarkdownRemark.html,
+            __html: data.allContentfulHomeText.edges[0].node.text.childMarkdownRemark.html,
         }}/>
         </div>
     </div>
