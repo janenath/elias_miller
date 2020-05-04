@@ -39,7 +39,7 @@ const concerts = () => (
     <SEO title="Elias Miller Concerts" />
     <h1 className="title">Upcoming Concerts</h1>
     {data.allContentfulEvent.edges.map(({ node }) => (
-          <div>
+          <div className="allEvents">
           
             {node.past == false &&
             <div className="section boxed">
@@ -76,7 +76,7 @@ const concerts = () => (
   }
     <h1 className="title">Previous Concerts</h1>
     {data.allContentfulEvent.edges.map(({ node }) => (
-      <div>
+      <div className="allEvents">
             {node.past == true &&
               <div className="section boxed">
             <div className="schedule">

@@ -334,6 +334,15 @@ p {
 }
 
 //schedule
+.allEvents {
+    margin: 3% auto;
+    padding: 10px;
+    width: 90%;
+    @media (max-width: 800px) {
+        width: 100%;
+        margin: 3% 0;
+    }
+}
 .schedule {
     margin-bottom: 20px;
     h3 {
