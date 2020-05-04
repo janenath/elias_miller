@@ -39,8 +39,10 @@ const concerts = () => (
     <SEO title="Elias Miller Concerts" />
     <h1 className="title">Upcoming Concerts</h1>
     {data.allContentfulEvent.edges.map(({ node }) => (
-          <div className="section boxed">
+          <div>
+          
             {node.past == false &&
+            <div className="section boxed">
             <div className="schedule">
             <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             <p>{node.role}</p>
@@ -64,6 +66,7 @@ const concerts = () => (
 
              }
               </div> 
+              </div>
              }
           </div>
 
@@ -73,8 +76,9 @@ const concerts = () => (
   }
     <h1 className="title">Previous Concerts</h1>
     {data.allContentfulEvent.edges.map(({ node }) => (
-          <div className="section boxed">
+      <div>
             {node.past == true &&
+              <div className="section boxed">
             <div className="schedule">
             <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             <p>{node.role}</p>
@@ -97,6 +101,7 @@ const concerts = () => (
               </div>
 
              }
+                </div>
               </div> 
              }
           </div>
