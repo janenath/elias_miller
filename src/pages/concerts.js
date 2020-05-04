@@ -45,7 +45,7 @@ const concerts = () => (
             <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             <p>{node.role}</p>
             <br/>
-            <p dangerouslySetInnerHTML={{
+            <div dangerouslySetInnerHTML={{
               __html: node.dates.childMarkdownRemark.html,
             }}/>
             {node.location && 
@@ -57,7 +57,7 @@ const concerts = () => (
             {node.description && 
               <div>
                 <br/>
-                <p dangerouslySetInnerHTML={{
+                <div dangerouslySetInnerHTML={{
                   __html: node.description.childMarkdownRemark.html,
                 }}/>
               </div>
@@ -79,7 +79,7 @@ const concerts = () => (
             <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             <p>{node.role}</p>
             <br/>
-            <p dangerouslySetInnerHTML={{
+            <div dangerouslySetInnerHTML={{
               __html: node.dates.childMarkdownRemark.html,
             }}/>
             {node.location && 
@@ -91,7 +91,7 @@ const concerts = () => (
             {node.description && 
               <div>
                 <br/>
-                <p dangerouslySetInnerHTML={{
+                <div dangerouslySetInnerHTML={{
                   __html: node.description.childMarkdownRemark.html,
                 }}/>
               </div>
