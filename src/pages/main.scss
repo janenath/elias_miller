@@ -13,7 +13,6 @@ $raleway: 'Raleway', sans-serif;
     font-family: $raleway;
     text-decoration: none;
     box-sizing: border-box;
-    // border: 1px green solid;
 }
 h1 {
     font-size: 2em;
@@ -251,7 +250,19 @@ p {
 
 
 //about
-.bio {
+.bioContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 20vw;
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
+}
+.biographyOne, .biographyTwo {
     font-size: 1em;
     width: 60vw;
     text-align: justify;
@@ -265,17 +276,20 @@ p {
         width: 90vw;
     }
 }
-.bioContainer {
-    display: flex;
-    align-items: center;
+.bioContainerOne {
     img {
-        width: 20vw;
+        float: right;
+        margin: 20px;
     }
-    @media (max-width: 800px) {
-        flex-direction: column;
-    }
-
 }
+.bioContainerTwo {
+    img {
+        float: left;
+        margin: 20px;
+    }
+}
+
+
 .imageContainer {
     display: flex;
     flex-direction: column;
