@@ -112,7 +112,7 @@ const About = () => (
             <div className="bio section">
               <h1 className="title">About Apollo Ensemble</h1>
               <a href="https://apolloensembleofboston.com/" target="_blank"><img className="image apolloLogo" src={data.contentfulApolloLogo.image.file.url}/></a>
-              <p dangerouslySetInnerHTML={{
+              <div dangerouslySetInnerHTML={{
                   __html: data.contentfulApolloDescription.apolloDescriptionText.childMarkdownRemark.html,
               }}/>
             </div>
