@@ -74,12 +74,14 @@ const About = () => (
               <div className="bioContainer"> 
               <div className="bioContainerOne">
               <img src={`${data.contentfulBioHeadshot.image.file.url}?w=400&h=530`} alt="Elias Miller" className="bioHeadshot"/>
+                <br />
                 <div className="biographyOne" dangerouslySetInnerHTML={{
                       __html: data.contentfulBiography.biographyText.childMarkdownRemark.html,
                 }}/>
               </div>  
               <div className="bioContainerTwo">
               <img src={`${data.contentfulBioImage.image.file.url}?w=400&h=530`} alt="Elias Miller Conducting" className="bioImage"/>
+                <br />
                 <div className="biographyTwo" dangerouslySetInnerHTML={{
                     __html: data.contentfulBiography.secondParagraph.childMarkdownRemark.html,
                 }}/>
