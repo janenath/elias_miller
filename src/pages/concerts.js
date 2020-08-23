@@ -9,10 +9,33 @@ const concerts = () => (
   <StaticQuery
     query={graphql`
       query {
-        allContentfulEvent(sort: { order: ASC, fields: [sortDate]}) {
+        current: allContentfulEvent(sort: { order: ASC, fields: [sortDate]}, filter: {past: {eq: false}}) {
           edges {
             node {
               title
+              note
+              link
+              role
+              dates {
+                childMarkdownRemark {
+                  html
+                }
+              }
+              past
+              location
+              description {
+                childMarkdownRemark {
+                  html
+                }
+              }
+            }
+          }
+        }
+        past: allContentfulEvent(sort: { order: DESC, fields: [sortDate]}, filter: {past: {eq: true}}) {
+          edges {
+            node {
+              title
+              note
               link
               role
               dates {
@@ -38,13 +61,20 @@ const concerts = () => (
     <div className="section">
     <SEO title="Elias Miller Concerts" />
     <h1 className="title">Upcoming Concerts</h1>
-    {data.allContentfulEvent.edges.map(({ node }) => (
+    {data.current.edges.map(({ node }) => (
           <div className="allEvents">
           
             {node.past == false &&
             <div className="section boxed">
             <div className="schedule">
             <h3><a href={node.link} target="_blank">{node.title}</a></h3>
+            {node.note && 
+              <div>
+                <br/>
+                <h4>{node.note}</h4>
+                <br/>
+              </div>
+            }  
             <p>{node.role}</p>
             <br/>
             <div dangerouslySetInnerHTML={{
@@ -75,12 +105,19 @@ const concerts = () => (
     )
   }
     <h1 className="title">Previous Concerts</h1>
-    {data.allContentfulEvent.edges.map(({ node }) => (
+    {data.past.edges.map(({ node }) => (
       <div className="allEvents">
             {node.past == true &&
               <div className="section boxed">
             <div className="schedule">
             <h3><a href={node.link} target="_blank">{node.title}</a></h3>
+            {node.note && 
+              <div>
+                <br/>
+                <h4>{node.note}</h4>
+                <br/>
+              </div>
+            }            
             <p>{node.role}</p>
             <br/>
             <div dangerouslySetInnerHTML={{

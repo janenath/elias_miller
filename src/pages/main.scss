@@ -352,7 +352,12 @@ p {
 .schedule {
     margin-bottom: 20px;
     h3 {
+        font-size: 1.45em;
         margin-bottom: 10px;
+    }
+    h4 {
+        font-size: 1.2em;
+        color: red;
     }
     a {
         text-decoration: underline;
