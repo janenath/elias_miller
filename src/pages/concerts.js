@@ -67,14 +67,12 @@ const concerts = () => (
             {node.past == false &&
             <div className="section boxed">
             <div className="schedule">
-            <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             {node.note && 
               <div>
-                <br/>
                 <h4>{node.note}</h4>
-                <br/>
               </div>
             }  
+            <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             <p>{node.role}</p>
             <br/>
             <div dangerouslySetInnerHTML={{
@@ -110,14 +108,12 @@ const concerts = () => (
             {node.past == true &&
               <div className="section boxed">
             <div className="schedule">
-            <h3><a href={node.link} target="_blank">{node.title}</a></h3>
             {node.note && 
               <div>
-                <br/>
                 <h4>{node.note}</h4>
-                <br/>
               </div>
-            }            
+            } 
+            <h3><a href={node.link} target="_blank">{node.title}</a></h3>           
             <p>{node.role}</p>
             <br/>
             <div dangerouslySetInnerHTML={{
