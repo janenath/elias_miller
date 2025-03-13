@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,7 +8,7 @@ const recordings = () => (
   <StaticQuery
   query={graphql`
     query {
-      allContentfulMedia(sort: {fields: order}) {
+      allContentfulMedia(sort: {order: ASC}) {
         edges {
           node {
             title
